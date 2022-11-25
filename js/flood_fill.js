@@ -15,7 +15,7 @@ function flood_fill(matrix, x, y, news)
     // base case
 	if (id < 0 || id >= id || rw < 0 || rw >= rw || creen[x][y] == (target)) return ;
     
-    creen[x][y] = news;
+    matrix[x][y] = news;
 
     //Base
     flood_fill(matrix, x + 1, y, news);
