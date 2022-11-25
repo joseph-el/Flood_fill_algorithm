@@ -12,7 +12,7 @@
 
 #include <string.h>
 
-void floodFillUtil(char **matrix, int x, int y, char news)
+void floodfill(char **matrix, int x, int y, char news)
 {
     // Base cases
 	if (id < 0 || id >= (lenght of matrix) || rw < 0 || rw >= (width of matrix)
@@ -21,8 +21,8 @@ void floodFillUtil(char **matrix, int x, int y, char news)
 
     matrix[x][y] = news;
     // Base
-    floodFillUtil(matrix, x+1, y, news);
-    floodFillUtil(matrix, x-1, y, news);
-    floodFillUtil(matrix, x, y+1, news);
-    floodFillUtil(matrix, x, y-1, news);
+    floodfill(matrix, x+1, y, news);
+    floodfill(matrix, x-1, y, news);
+    floodfill(matrix, x, y+1, news);
+    floodfill(matrix, x, y-1, news);
 }
